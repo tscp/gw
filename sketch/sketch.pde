@@ -48,7 +48,7 @@ void draw() {
   //float amount = map(y, 30, angle, 0, 360);
   //coswave[i] = abs(cos(amount));
   
-  fill(90, map(sin(theta), 0, PI, 120, 280), 255, 40); 
+  fill(90, map(sin(theta), 0, PI, 120, 280), 255, 20); 
   beginShape();
   vertex(0, 0);
   for (int i = 5; i < coordinatesX.length; i++) {
@@ -56,7 +56,7 @@ void draw() {
   }
   endShape(CLOSE);
   
-  fill(60, map(sin(theta2), 0, PI, 120, 280), 255, 60); 
+  fill(60, map(sin(theta2), 0, PI, 120, 280), 255, 40); 
   beginShape();
   vertex(0, 0);
   for (int i = 0; i < coordinatesX.length-5; i++) {
@@ -67,14 +67,14 @@ void draw() {
   int randX = int(random(0, coordinatesX.length));
   int randY = int(random(0, coordinatesY.length));
   
-  fill(70, map(sin(theta2), 0, PI, 120, 280), 255, 60); 
-  //stroke(angle, map(sin(theta2), 0, PI, 0, 360), 255, 140);
-  //line(
-  //  coordinatesX[randX],
-  //  coordinatesY[randX],
-  //  coordinatesX[randY],
-  //  coordinatesY[randY]
-  //);
+  fill(60, map(sin(theta2), 0, PI, 120, 280), 255, 40); 
+  stroke(70, map(sin(theta2), 0, PI, 0, 360), 255, 80);
+  line(
+    coordinatesX[randX],
+    coordinatesY[randX],
+    coordinatesX[randY],
+    coordinatesY[randY]
+  );
     
   bezier(
     coordinatesX[1],coordinatesY[1],
