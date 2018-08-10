@@ -1,5 +1,6 @@
 PImage[] image;
 PImage[] s_image;
+PImage offscr;
 int x, y, p = 0;
 String[] url = {
   "https://scontent-nrt1-1.cdninstagram.com/t51.2885-15/e35/18812743_845045872337145_7002396632222269440_n.jpg",
@@ -10,6 +11,7 @@ String[] url = {
 
 void setup() {
   size(1080, 1080);
+  offscr = createImage(width, height, RGB);
   image = new PImage[url.length];
   s_image = new PImage[url.length];
   
@@ -17,12 +19,13 @@ void setup() {
     image[i] = loadImage(url[i], "jpg");
     s_image[i] = loadImage(url[i], "jpg");
   }
-  
-  background(0);
-  noStroke();
 }
 
 void draw() {
+  
+  loadPixels();
+  offscr.pixels = pixels;
+  offscr.updatePixels();
   
   background(0);
   noStroke();
@@ -37,10 +40,13 @@ void draw() {
   float m = map(theta, -1, 1, 0, width);  
   int xpx = floor(m);
   
-  if(m == 0.0) {
-    p++;
-    if(p > url.length-1) p = 0;
-  }
+  int p = floor(mouseY % 4);
+  
+  //if(m == 0.0) {
+  //  p++;
+  //  if(p > url.length-1) p = 0;
+  //}
+  
   for(int i = 0; i < height; i++) {
     color c = image[p].get(xpx, i);
     fill(c);
@@ -52,4 +58,12 @@ void draw() {
   stroke(255);
   line(tx, height-20, tx, height-120);
 
+}
+
+void updatePixels(){
+  loadPixels();
+  offscr.pixels = pixels;
+  offscr.updatePixels();
+  tint(255,40);
+  image(offscr, 0, 0, width, height);
 }
