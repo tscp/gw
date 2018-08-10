@@ -3,10 +3,10 @@ PImage[] s_image;
 PImage offscr;
 int x, y, p = 0;
 String[] url = {
-  "https://scontent-nrt1-1.cdninstagram.com/t51.2885-15/e35/18812743_845045872337145_7002396632222269440_n.jpg",
-  "https://scontent-nrt1-1.cdninstagram.com/t51.2885-15/e35/18443600_1894334250780526_7340401813864054784_n.jpg",
-  "https://scontent-nrt1-1.cdninstagram.com/t51.2885-15/e35/18252717_434944246876313_1121183221002797056_n.jpg",
-  "https://scontent-nrt1-1.cdninstagram.com/t51.2885-15/e35/18251589_126662744550506_3003793817791889408_n.jpg"
+  "https://scontent-nrt1-1.cdninstagram.com/vp/2928cadac7c3db7cb64cf912e61e9ab1/5BED1C86/t51.2885-15/e35/18251589_126662744550506_3003793817791889408_n.jpg?se=7",
+  "https://scontent-nrt1-1.cdninstagram.com/vp/6b8927dd9a1b4d0a6884d33a0a5c2985/5C04C887/t51.2885-15/e35/18252717_434944246876313_1121183221002797056_n.jpg?se=7",
+  "https://scontent-nrt1-1.cdninstagram.com/vp/b41ba97cbed5c6c872e82512c421ebf4/5C11E16D/t51.2885-15/e35/18443600_1894334250780526_7340401813864054784_n.jpg?se=7",
+  "https://scontent-nrt1-1.cdninstagram.com/vp/847a46db30a16bac3827c9e6dac7f920/5C00AF11/t51.2885-15/e35/18160453_201567427026239_8568549528926420992_n.jpg?se=7"
 };
 
 void setup() {
